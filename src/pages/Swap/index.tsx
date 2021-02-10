@@ -1,11 +1,10 @@
 import { CurrencyAmount, JSBI, Token, Trade } from 'uniswap-xdai-sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import AddressInputPanel from '../../components/AddressInputPanel'
-import { ButtonError, ButtonImagePlus, ButtonLight, ButtonPrimary } from '../../components/Button'
+import { ButtonError, ButtonLight, ButtonPrimary } from '../../components/Button'
 import Card, { GreyCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
 import ConfirmSwapModal from '../../components/swap/ConfirmSwapModal'
@@ -19,7 +18,7 @@ import { ArrowWrapper, BottomGrouping, Dots, SwapCallbackError, Wrapper } from '
 import TradePrice from '../../components/swap/TradePrice'
 import TokenWarningModal from '../../components/TokenWarningModal'
 
-import { BETTER_TRADE_LINK_THRESHOLD, INITIAL_ALLOWED_SLIPPAGE, HONEY } from '../../constants'
+import { BETTER_TRADE_LINK_THRESHOLD, INITIAL_ALLOWED_SLIPPAGE } from '../../constants'
 import { isTradeBetter } from '../../data/V1'
 import { useActiveWeb3React } from '../../hooks'
 import { useCurrency } from '../../hooks/Tokens'
@@ -41,7 +40,6 @@ import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import { computeTradePriceBreakdown, warningSeverity } from '../../utils/prices'
 import AppBody from '../AppBody'
 import { ClickableText } from '../Pool/styleds'
-import { addTokenToMetamask } from '../../utils/addTokenToMetamask'
 
 export default function Swap() {
   const loadedUrlParams = useDefaultsFromURLSearch()
@@ -252,11 +250,6 @@ export default function Swap() {
     onCurrencySelection
   ])
 
-  const { ethereum } = window
-  const handleAddHnyToMM = useCallback(() => addTokenToMetamask(ethereum, HONEY), [])
-  const isHnySelected =
-    currencies[Field.INPUT]?.symbol === HONEY.symbol || currencies[Field.OUTPUT]?.symbol === HONEY.symbol
-
   return (
     <>
       <TokenWarningModal
@@ -264,20 +257,6 @@ export default function Swap() {
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
-      {isHnySelected && (
-        <ButtonImagePlus
-          onClick={() => handleAddHnyToMM()}
-          style={{
-            width: 'auto',
-            position: 'absolute',
-            marginTop: '-20px',
-            marginRight: isMobile ? '' : '-200px',
-            whiteSpace: 'nowrap'
-          }}
-        >
-          Add HNY to MetaMask
-        </ButtonImagePlus>
-      )}
       <AppBody>
         <SwapPoolTabs active={'swap'} />
         <Wrapper id="swap-page">
