@@ -9,10 +9,18 @@
     {
       "chainId": 1,
       "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
-      "name": "cheapDai",
+      "name": "Cheap Dai",
       "symbol": "cheapDAI",
       "decimals": 18,
-      "logoURI":"https://assets.coingecko.com/coins/images/9956/thumb/dai-multi-collateral-mcd.png?1574218774"
+      "logoURI": "https://assets.coingecko.com/coins/images/9956/thumb/dai-multi-collateral-mcd.png?1574218774"
+    },
+    {
+      "chainId": 1,
+      "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+      "name": "Cheap Basic Attention Token",
+      "symbol": "cheapBAT",
+      "decimals": 18,
+      "logoURI": "https://assets.coingecko.com/coins/images/677/thumb/basic-attention-token.png?1547034427"
     }
   ],
   "version": {
