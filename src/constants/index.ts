@@ -46,7 +46,7 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.CTH]: [WETH[ChainId.MAINNET]] // TODO: Make sure this is correct
+  [ChainId.CTH]: [WETH[ChainId.CTH]]
 }
 
 // used to construct intermediary pairs for trading
@@ -70,7 +70,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.CTH]: [...WETH_ONLY[ChainId.CTH], WETH_TOKEN, HONEY, STAKE]
+  [ChainId.CTH]: [...WETH_ONLY[ChainId.CTH]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {}
