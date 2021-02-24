@@ -89,7 +89,6 @@ export default function App() {
               </Switch>
             </Web3ReactManager>
             <Marginer />
-            <span>Feel free to donate to 0x8ddB5516F4325ccEb237c5085107Ef04575a93EC</span>
           </BodyWrapper>
         </AppWrapper>
       </HashRouter>
