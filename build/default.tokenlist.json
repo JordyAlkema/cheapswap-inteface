@@ -21,6 +21,14 @@
       "symbol": "cheapBAT",
       "decimals": 18,
       "logoURI": "https://assets.coingecko.com/coins/images/677/thumb/basic-attention-token.png?1547034427"
+    },
+    {
+      "chainId": 1,
+      "address": "0x49162908a4b3b4b1d90bd67d7d191bfefc6f43ad",
+      "name": "Cheap Reflect",
+      "symbol": "cRFI",
+      "decimals": 9,
+      "logoURI": "https://i.imgur.com/6YkJ15f.png"
     }
   ],
   "version": {
