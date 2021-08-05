@@ -29,6 +29,14 @@
       "symbol": "cRFI",
       "decimals": 9,
       "logoURI": "https://i.imgur.com/6YkJ15f.png"
+    },
+    {
+      "name": "IDA MURNI",
+      "address": "0x1711221Bd9D3d4cdd015c03bDB40eE843483CcE0",
+      "symbol": "IDA",
+      "decimals": 18,
+      "chainId": 108,
+      "logoURI": "https://raw.githubusercontent.com/IdaMurni/website/main/src/assets/img/ida_murni_master.png"
     }
   ],
   "version": {
