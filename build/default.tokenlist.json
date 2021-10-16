@@ -4,10 +4,10 @@
   "keywords": [
     "defi"
   ],
-  "timestamp": "2021-02-10T16:00:00.809+00:00",
+  "timestamp": "2021-10-16T18:00:00.000+00:00",
   "tokens": [
     {
-      "chainId": 1,
+      "chainId": 777,
       "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
       "name": "Cheap Dai",
       "symbol": "cheapDAI",
@@ -15,7 +15,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/9956/thumb/dai-multi-collateral-mcd.png?1574218774"
     },
     {
-      "chainId": 1,
+      "chainId": 777,
       "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
       "name": "Cheap Basic Attention Token",
       "symbol": "cheapBAT",
@@ -23,7 +23,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/677/thumb/basic-attention-token.png?1547034427"
     },
     {
-      "chainId": 1,
+      "chainId": 777,
       "address": "0x49162908a4b3b4b1d90bd67d7d191bfefc6f43ad",
       "name": "Cheap Reflect",
       "symbol": "cRFI",
@@ -32,8 +32,8 @@
     }
   ],
   "version": {
-    "major": 0,
-    "minor": 0,
+    "major": 1,
+    "minor": 1,
     "patch": 0
   }
 }
